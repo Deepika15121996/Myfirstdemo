@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<center>
+<h1>User Registration Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>{{ myforms }}</table >
+        <input type="Submit" class ="btn btn-primary" value="Register"
+</center> 
+{% endblock body  %}

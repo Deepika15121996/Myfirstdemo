@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>Add Receiver Information Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>{{ myforms }}</table>
+        <input type="Submit" class="btn btn-primary" value="Add Receiver Blood"/>
+    </form>
+{% endblock body %}

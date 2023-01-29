@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+<table border="2" class="table table-Danger table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Bloodgroup</th>
+        <th>Qty_req</th>
+        <th>Alloted_bloodbagno</th>
+        <th>Request_no</th>
+        <th>Request_dt</th>
+        <th>Request_status</th>
+        <th>Hospital</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    {% for dt in data  %}
+    <tr>
+        <td>{{ dt.bbname }}</td>
+        <td>{{ dt.address }}</td>
+        <td>{{ dt.city }}</td>
+        <td>{{ dt.phone }}</td>
+        <td>{{ dt.email }}</td>
+        <td>{{ dt.bloodgroup }}</td>
+        <td>{{ dt.qty_req }}</td>
+        <td>{{ dt.alloted_bloodbagno }}</td>
+        <td>{{ dt.request_no }}</td>
+        <td>{{ dt.request_dt }}</td>
+        <td>{{ dt.request_status }}</td>
+        <td>{{ dt.hospital }}</td>
+        <td><a href="{% url 'updbb' id=dt.bloodbankid %}"><button class="btn btn-success">Update</button></a></td>
+        <td><a href="{% url 'delbb' id=dt.bloodbankid %}"><button class="btn btn-danger">Delete</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <pre>
+        Select The Blood Group :<select name="bg">
+            <option></option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+        </select>
+        Select The City :       <input type="text" name="ct"/>
+
+                                <input type="Submit" class="btn btn-primary" value="Search Donor"/>
+
+    </pre>
+
+
+
+</form>
+
+
+
+
+
+{% endblock body %}
